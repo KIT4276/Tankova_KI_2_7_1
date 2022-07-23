@@ -124,67 +124,16 @@ namespace Checkers
             {
                 IsSelected = false;
                 RemoveAdditionalMaterial(2);
-                PossibleMoves(component);
-                
+                ChipComponent.Self.PossibleMoves(component);
+
             }
             else
             {
                 IsSelected = true;
                 AddAdditionalMaterial(_selectMaterial, 2);
-                PossibleMoves(component);
-                
+                ChipComponent.Self.PossibleMoves(component);
+
             }
-        }
-
-        protected void PossibleMoves(BaseClickComponent component) //плохо работает, переделать!
-        {
-            if (Pair is CellComponent cell)
-            {
-                Debug.Log("PossibleMoves 1"); // срабатывает
-                Debug.Log(_color);
-                Debug.Log(Pair);
-
-                NeighborType a = NeighborType.TopLeft;
-                NeighborType b = NeighborType.TopRight;
-
-                if (GetColor == ColorType.Black) // тут не срабатывает. почему?
-                {
-                    Debug.Log("PossibleMoves 2");
-                    a = NeighborType.BottomLeft;
-                    b = NeighborType.BottomRight;
-                }
-
-                if (cell.TryGetNeighbor(a, out var leftCell))
-                {
-                    Debug.Log("PossibleMoves 3");
-                    if (leftCell.isEmpty) leftCell.HighlightSelected(component);
-
-                    else if (leftCell.Pair.GetColor != GetColor && leftCell.TryGetNeighbor(a, out var leftOverEnemy) && leftOverEnemy.isEmpty)
-                    {
-                        Debug.Log("PossibleMoves 4");
-                        (leftCell.Pair as ChipComponent)?.SetEatMaterial();
-                        leftOverEnemy.HighlightSelected(component);
-                    }
-
-                }
-                if (cell.TryGetNeighbor(b, out var rightCell))
-                {
-                    Debug.Log("PossibleMoves 5");
-                    if (rightCell.isEmpty)
-                    {
-                        Debug.Log("PossibleMoves 6");
-                        rightCell.HighlightSelected(component);
-                    }
-                    else if (rightCell.Pair.GetColor != GetColor && rightCell.TryGetNeighbor(b, out var rightOverEnemy) && rightOverEnemy.isEmpty)
-                    {
-                        Debug.Log("PossibleMoves 7");
-                        (rightCell.Pair as ChipComponent)?.SetEatMaterial();
-                        rightOverEnemy.HighlightSelected(component);
-                    }
-
-                }
-            }
-            
         }
     }
 

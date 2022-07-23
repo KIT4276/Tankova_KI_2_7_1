@@ -43,7 +43,7 @@ namespace Checkers
 
             if (component is ChipComponent chip )// если выбрана шашка и её цвет ходит
             {
-                Debug.Log("если выбрана шашка и её цвет ходит");
+               // Debug.Log("если выбрана шашка и её цвет ходит");
                 if (_selectedChip == null)
                 {
                     _selectedChip = chip;
@@ -69,7 +69,7 @@ namespace Checkers
             else if (component is CellComponent cell && cell.isEmptyToMove && _selectedChip != null) // тут в _selectedChip приходит null
 
             {
-                Debug.Log("если выбрана клетка и она пуста и выбранная фишка не нал");
+                //Debug.Log("если выбрана клетка и она пуста и выбранная фишка не нал");
                 Switch();
                 _selectedChip.Move(cell);
                 _selectedChip = null;
@@ -85,8 +85,6 @@ namespace Checkers
         {
             _currentTurn = _currentTurn == ColorType.Black ? ColorType.White : ColorType.Black;
 
-            //CameraControl cameraControl = new CameraControl();
-            //cameraControl.CameraViewChange();
             CameraControl.Self.CameraViewChange();
         }
         private void Victory(ChipComponent component)
