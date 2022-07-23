@@ -7,33 +7,37 @@ namespace Checkers
 {
     public abstract class BaseClickComponent : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-        [SerializeField]
-        protected Material _selectMaterial;
-        [SerializeField]
-        private Material _hoverMaterial;
-        [SerializeField]
-        protected Material _canEatMaterial;
-
         //Меш игрового объекта
         private MeshRenderer _mesh;
         //Список материалов на меше объекта
-        private Material[] _meshMaterials = new Material[3];
+        private Material[] _meshMaterials = new Material[4];
+
+        [Tooltip("Цвет клетки при наведении курсора"), SerializeField] 
+        protected Material _hoverMaterial;
+
+        [Tooltip("Цвет выбранной шашки"), SerializeField] 
+        protected Material _selectMaterial;
+
+        [Tooltip("Цвет шашки, которую можно съесть"), SerializeField]
+        protected Material _canEatMaterial;
 
         [Tooltip("Цветовая сторона игрового объекта"), SerializeField]
-        protected ColorType _color;
+        private ColorType _color;
 
         /// <summary>
         /// Возвращает цветовую сторону игрового объекта
         /// </summary>
         public ColorType GetColor => _color;
-        
 
         /// <summary>
         /// Возвращает или устанавливает пару игровому объекту
         /// </summary>
-        /// <remarks>У клеток пара - фишка, у фишек - клетка</remarks>
+        /// <remarks> У клеток пара - фишка, у фишек - клетка</remarks>
         public BaseClickComponent Pair { get; set; }
+
         public bool IsSelected { get; protected set; }
+
+
 
         /// <summary>
         /// Добавляет дополнительный материал
@@ -73,6 +77,7 @@ namespace Checkers
         /// </summary>
         public event FocusEventHandler OnFocusEventHandler;
 
+
         //При навадении на объект мышки, вызывается данный метод
         //При наведении на фишку, должна подсвечиваться клетка под ней
         //При наведении на клетку - подсвечиваться сама клетка
@@ -106,34 +111,18 @@ namespace Checkers
             _meshMaterials[0] = _mesh.material;
         }
 
-        protected void Highlight(CellComponent component, bool isSelect) 
+        protected void ToHighlight(CellComponent component, bool isSelect)  
         {
-            if (isSelect)
-            {
-                component.AddAdditionalMaterial(_hoverMaterial, 1);
-            }
-            else
-            {
-                component.RemoveAdditionalMaterial(1);
-            }
-        }
-
-        public void HighlightSelected(BaseClickComponent component) //  работает некорректно. почему?
-        {
-            if (IsSelected)
-            {
-                IsSelected = false;
-                RemoveAdditionalMaterial(2);
-                ChipComponent.Self.PossibleMoves(component);
-
-            }
-            else
-            {
-                IsSelected = true;
-                AddAdditionalMaterial(_selectMaterial, 2);
-                ChipComponent.Self.PossibleMoves(component);
-
-            }
+                if (isSelect)
+                {
+                    component.AddAdditionalMaterial(_hoverMaterial, 1);
+                }
+                else
+                {
+                    component.RemoveAdditionalMaterial(1);
+                }
+            
+            
         }
     }
 

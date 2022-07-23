@@ -411,8 +411,8 @@ GameObject:
   - component: {fileID: 69678326}
   - component: {fileID: 69678329}
   - component: {fileID: 69678328}
-  - component: {fileID: 69678327}
   - component: {fileID: 69678330}
+  - component: {fileID: 69678327}
   m_Layer: 0
   m_Name: Cube (0_6)
   m_TagString: Untagged
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &71253841
 GameObject:
@@ -521,7 +521,6 @@ GameObject:
   - component: {fileID: 71253842}
   - component: {fileID: 71253845}
   - component: {fileID: 71253844}
-  - component: {fileID: 71253843}
   - component: {fileID: 71253846}
   m_Layer: 0
   m_Name: Cube (3_3)
@@ -544,19 +543,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &71253843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71253841}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &71253844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -616,9 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &96168488
 GameObject:
@@ -631,7 +617,6 @@ GameObject:
   - component: {fileID: 96168489}
   - component: {fileID: 96168492}
   - component: {fileID: 96168491}
-  - component: {fileID: 96168490}
   - component: {fileID: 96168493}
   m_Layer: 0
   m_Name: Cube (2_2)
@@ -654,19 +639,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &96168490
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96168488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &96168491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -726,9 +698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &165528074
 GameObject:
@@ -741,7 +713,6 @@ GameObject:
   - component: {fileID: 165528075}
   - component: {fileID: 165528078}
   - component: {fileID: 165528077}
-  - component: {fileID: 165528076}
   - component: {fileID: 165528079}
   m_Layer: 0
   m_Name: Cube (3_7)
@@ -764,19 +735,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &165528076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165528074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &165528077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -836,9 +794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &182530671
 GameObject:
@@ -851,7 +809,6 @@ GameObject:
   - component: {fileID: 182530672}
   - component: {fileID: 182530675}
   - component: {fileID: 182530674}
-  - component: {fileID: 182530673}
   - component: {fileID: 182530676}
   m_Layer: 0
   m_Name: Cube (6_2)
@@ -874,19 +831,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &182530673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182530671}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &182530674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -946,9 +890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &197848454
 GameObject:
@@ -964,6 +908,7 @@ GameObject:
   - component: {fileID: 197848456}
   - component: {fileID: 197848459}
   - component: {fileID: 197848460}
+  - component: {fileID: 197848461}
   m_Layer: 0
   m_Name: WhiteChecker (8)
   m_TagString: Untagged
@@ -1058,11 +1003,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 2.9
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
 --- !u!114 &197848460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,6 +1024,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentTurn: 0
   _eventSystem: {fileID: 611996390}
+--- !u!54 &197848461
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197848454}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &224729405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1144,6 @@ GameObject:
   - component: {fileID: 283699184}
   - component: {fileID: 283699187}
   - component: {fileID: 283699186}
-  - component: {fileID: 283699185}
   - component: {fileID: 283699188}
   m_Layer: 0
   m_Name: Cube (4_6)
@@ -1204,19 +1166,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &283699185
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283699183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &283699186
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1276,9 +1225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &295003688
 GameObject:
@@ -1291,8 +1240,8 @@ GameObject:
   - component: {fileID: 295003689}
   - component: {fileID: 295003692}
   - component: {fileID: 295003691}
-  - component: {fileID: 295003690}
   - component: {fileID: 295003693}
+  - component: {fileID: 295003690}
   m_Layer: 0
   m_Name: Cube (7_5)
   m_TagString: Untagged
@@ -1386,9 +1335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &406957269
 GameObject:
@@ -1403,6 +1352,7 @@ GameObject:
   - component: {fileID: 406957272}
   - component: {fileID: 406957271}
   - component: {fileID: 406957274}
+  - component: {fileID: 406957275}
   m_Layer: 0
   m_Name: BlackChecker (5)
   m_TagString: Untagged
@@ -1497,11 +1447,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &406957275
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406957269}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &421183042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1483,7 @@ GameObject:
   - component: {fileID: 421183045}
   - component: {fileID: 421183044}
   - component: {fileID: 421183047}
+  - component: {fileID: 421183048}
   m_Layer: 0
   m_Name: WhiteChecker (9)
   m_TagString: Untagged
@@ -1609,11 +1578,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 7.3
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &421183048
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421183042}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &519137687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1707,7 @@ GameObject:
   - component: {fileID: 526254327}
   - component: {fileID: 526254326}
   - component: {fileID: 526254329}
+  - component: {fileID: 526254330}
   m_Layer: 0
   m_Name: WhiteChecker (10)
   m_TagString: Untagged
@@ -1814,11 +1802,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &526254330
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526254324}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &529920770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,7 +1836,6 @@ GameObject:
   - component: {fileID: 529920771}
   - component: {fileID: 529920774}
   - component: {fileID: 529920773}
-  - component: {fileID: 529920772}
   - component: {fileID: 529920775}
   m_Layer: 0
   m_Name: Cube (4_0)
@@ -1853,19 +1858,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &529920772
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529920770}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &529920773
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1925,9 +1917,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &533933347
 GameObject:
@@ -1942,6 +1934,7 @@ GameObject:
   - component: {fileID: 533933350}
   - component: {fileID: 533933349}
   - component: {fileID: 533933352}
+  - component: {fileID: 533933353}
   m_Layer: 0
   m_Name: WhiteChecker (6)
   m_TagString: Untagged
@@ -2036,11 +2029,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &533933353
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533933347}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &543456184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,7 +2156,6 @@ GameObject:
   - component: {fileID: 547023012}
   - component: {fileID: 547023015}
   - component: {fileID: 547023014}
-  - component: {fileID: 547023013}
   - component: {fileID: 547023016}
   m_Layer: 0
   m_Name: Cube (2_6)
@@ -2168,19 +2178,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &547023013
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547023011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &547023014
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2240,9 +2237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &551323677
 GameObject:
@@ -2348,7 +2345,6 @@ GameObject:
   - component: {fileID: 568426947}
   - component: {fileID: 568426950}
   - component: {fileID: 568426949}
-  - component: {fileID: 568426948}
   - component: {fileID: 568426951}
   m_Layer: 0
   m_Name: Cube (1_5)
@@ -2371,19 +2367,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &568426948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568426946}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &568426949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2443,9 +2426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &568676400
 GameObject:
@@ -2458,8 +2441,8 @@ GameObject:
   - component: {fileID: 568676401}
   - component: {fileID: 568676404}
   - component: {fileID: 568676403}
-  - component: {fileID: 568676402}
   - component: {fileID: 568676405}
+  - component: {fileID: 568676402}
   m_Layer: 0
   m_Name: Cube(0_0)
   m_TagString: Untagged
@@ -2553,9 +2536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &583529411
 GameObject:
@@ -3008,6 +2991,7 @@ GameObject:
   - component: {fileID: 620382852}
   - component: {fileID: 620382851}
   - component: {fileID: 620382854}
+  - component: {fileID: 620382855}
   m_Layer: 0
   m_Name: WhiteChecker (1)
   m_TagString: Untagged
@@ -3102,11 +3086,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &620382855
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620382849}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &634384331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,6 +3122,7 @@ GameObject:
   - component: {fileID: 634384334}
   - component: {fileID: 634384333}
   - component: {fileID: 634384336}
+  - component: {fileID: 634384337}
   m_Layer: 0
   m_Name: BlackChecker (4)
   m_TagString: Untagged
@@ -3214,11 +3217,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &634384337
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634384331}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &644362796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3230,7 +3251,6 @@ GameObject:
   - component: {fileID: 644362797}
   - component: {fileID: 644362800}
   - component: {fileID: 644362799}
-  - component: {fileID: 644362798}
   - component: {fileID: 644362801}
   m_Layer: 0
   m_Name: Cube (6_4)
@@ -3253,19 +3273,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &644362798
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644362796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &644362799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3325,9 +3332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &689251534
 GameObject:
@@ -3527,6 +3534,7 @@ GameObject:
   - component: {fileID: 730600065}
   - component: {fileID: 730600064}
   - component: {fileID: 730600067}
+  - component: {fileID: 730600068}
   m_Layer: 0
   m_Name: BlackChecker (6)
   m_TagString: Untagged
@@ -3621,11 +3629,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &730600068
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730600062}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &749286983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,6 +3665,7 @@ GameObject:
   - component: {fileID: 749286986}
   - component: {fileID: 749286985}
   - component: {fileID: 749286988}
+  - component: {fileID: 749286989}
   m_Layer: 0
   m_Name: BlackChecker (11)
   m_TagString: Untagged
@@ -3733,11 +3760,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &749286989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749286983}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &755346298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,7 +3929,6 @@ GameObject:
   - component: {fileID: 821172022}
   - component: {fileID: 821172025}
   - component: {fileID: 821172024}
-  - component: {fileID: 821172023}
   - component: {fileID: 821172026}
   m_Layer: 0
   m_Name: Cube (4_4)
@@ -3907,19 +3951,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &821172023
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821172021}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &821172024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3979,9 +4010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &827660584
 GameObject:
@@ -4089,6 +4120,7 @@ GameObject:
   - component: {fileID: 836003722}
   - component: {fileID: 836003721}
   - component: {fileID: 836003724}
+  - component: {fileID: 836003725}
   m_Layer: 0
   m_Name: WhiteChecker (2)
   m_TagString: Untagged
@@ -4183,11 +4215,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &836003725
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836003719}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &862155139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,7 +4342,6 @@ GameObject:
   - component: {fileID: 866811508}
   - component: {fileID: 866811511}
   - component: {fileID: 866811510}
-  - component: {fileID: 866811509}
   - component: {fileID: 866811512}
   m_Layer: 0
   m_Name: Cube (4_2)
@@ -4315,19 +4364,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &866811509
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866811507}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &866811510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4387,9 +4423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &883426816
 GameObject:
@@ -4495,7 +4531,6 @@ GameObject:
   - component: {fileID: 891830856}
   - component: {fileID: 891830859}
   - component: {fileID: 891830858}
-  - component: {fileID: 891830857}
   - component: {fileID: 891830860}
   m_Layer: 0
   m_Name: Cube (5_3)
@@ -4518,19 +4553,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &891830857
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891830855}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &891830858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4590,10 +4612,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
+--- !u!1 &905456874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905456876}
+  - component: {fileID: 905456875}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &905456875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905456874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197898a828b35004cb9fd19f0d180231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentTurn: 0
+  _eventSystem: {fileID: 611996390}
+--- !u!4 &905456876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905456874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1848684998}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &942997532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,6 +4675,7 @@ GameObject:
   - component: {fileID: 942997535}
   - component: {fileID: 942997534}
   - component: {fileID: 942997537}
+  - component: {fileID: 942997538}
   m_Layer: 0
   m_Name: WhiteChecker
   m_TagString: Untagged
@@ -4701,11 +4770,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &942997538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942997532}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &954136891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,6 +4806,7 @@ GameObject:
   - component: {fileID: 954136894}
   - component: {fileID: 954136893}
   - component: {fileID: 954136896}
+  - component: {fileID: 954136897}
   m_Layer: 0
   m_Name: BlackChecker (3)
   m_TagString: Untagged
@@ -4813,11 +4901,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &954136897
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954136891}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +5376,6 @@ GameObject:
   - component: {fileID: 1142970479}
   - component: {fileID: 1142970482}
   - component: {fileID: 1142970481}
-  - component: {fileID: 1142970480}
   - component: {fileID: 1142970483}
   m_Layer: 0
   m_Name: Cube (5_7)
@@ -5293,19 +5398,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1142970480
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142970478}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1142970481
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5365,9 +5457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1200818258
 GameObject:
@@ -5382,6 +5474,7 @@ GameObject:
   - component: {fileID: 1200818261}
   - component: {fileID: 1200818260}
   - component: {fileID: 1200818263}
+  - component: {fileID: 1200818264}
   m_Layer: 0
   m_Name: WhiteChecker (7)
   m_TagString: Untagged
@@ -5476,11 +5569,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1200818264
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200818258}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1264969983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5492,7 +5603,6 @@ GameObject:
   - component: {fileID: 1264969984}
   - component: {fileID: 1264969987}
   - component: {fileID: 1264969986}
-  - component: {fileID: 1264969985}
   - component: {fileID: 1264969988}
   m_Layer: 0
   m_Name: Cube (5_5)
@@ -5515,19 +5625,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1264969985
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264969983}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1264969986
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5587,9 +5684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1273112013
 GameObject:
@@ -5602,7 +5699,6 @@ GameObject:
   - component: {fileID: 1273112014}
   - component: {fileID: 1273112017}
   - component: {fileID: 1273112016}
-  - component: {fileID: 1273112015}
   - component: {fileID: 1273112018}
   m_Layer: 0
   m_Name: Cube (2_4)
@@ -5625,19 +5721,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1273112015
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273112013}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1273112016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5697,9 +5780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1316448713
 GameObject:
@@ -5712,7 +5795,6 @@ GameObject:
   - component: {fileID: 1316448714}
   - component: {fileID: 1316448717}
   - component: {fileID: 1316448716}
-  - component: {fileID: 1316448715}
   - component: {fileID: 1316448718}
   m_Layer: 0
   m_Name: 'Cube (2_0) '
@@ -5735,19 +5817,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1316448715
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316448713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1316448716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5807,9 +5876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1324380361
 GameObject:
@@ -6103,6 +6172,7 @@ GameObject:
   - component: {fileID: 1342856280}
   - component: {fileID: 1342856279}
   - component: {fileID: 1342856282}
+  - component: {fileID: 1342856283}
   m_Layer: 0
   m_Name: BlackChecker (10)
   m_TagString: Untagged
@@ -6197,11 +6267,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1342856283
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342856277}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1348599655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,6 +6303,7 @@ GameObject:
   - component: {fileID: 1348599658}
   - component: {fileID: 1348599657}
   - component: {fileID: 1348599660}
+  - component: {fileID: 1348599661}
   m_Layer: 0
   m_Name: BlackChecker (1)
   m_TagString: Untagged
@@ -6309,11 +6398,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1348599661
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348599655}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1349817551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,7 +6432,6 @@ GameObject:
   - component: {fileID: 1349817552}
   - component: {fileID: 1349817555}
   - component: {fileID: 1349817554}
-  - component: {fileID: 1349817553}
   - component: {fileID: 1349817556}
   m_Layer: 0
   m_Name: Cube (6_6)
@@ -6348,19 +6454,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1349817553
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349817551}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1349817554
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6420,9 +6513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1387645132
 GameObject:
@@ -6437,6 +6530,7 @@ GameObject:
   - component: {fileID: 1387645135}
   - component: {fileID: 1387645134}
   - component: {fileID: 1387645137}
+  - component: {fileID: 1387645138}
   m_Layer: 0
   m_Name: BlackChecker
   m_TagString: Untagged
@@ -6531,11 +6625,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1387645138
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387645132}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1393197326
 GameObject:
   m_ObjectHideFlags: 0
@@ -6549,6 +6661,7 @@ GameObject:
   - component: {fileID: 1393197329}
   - component: {fileID: 1393197328}
   - component: {fileID: 1393197331}
+  - component: {fileID: 1393197332}
   m_Layer: 0
   m_Name: WhiteChecker (3)
   m_TagString: Untagged
@@ -6643,11 +6756,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1393197332
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393197326}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1397063810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,7 +6790,6 @@ GameObject:
   - component: {fileID: 1397063811}
   - component: {fileID: 1397063814}
   - component: {fileID: 1397063813}
-  - component: {fileID: 1397063812}
   - component: {fileID: 1397063815}
   m_Layer: 0
   m_Name: Cube (1_1)
@@ -6682,19 +6812,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1397063812
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397063810}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1397063813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6754,9 +6871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1418185706
 GameObject:
@@ -6864,6 +6981,7 @@ GameObject:
   - component: {fileID: 1424273833}
   - component: {fileID: 1424273832}
   - component: {fileID: 1424273835}
+  - component: {fileID: 1424273836}
   m_Layer: 0
   m_Name: BlackChecker (2)
   m_TagString: Untagged
@@ -6958,11 +7076,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1424273836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424273830}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1442308365
 GameObject:
   m_ObjectHideFlags: 0
@@ -6974,7 +7110,6 @@ GameObject:
   - component: {fileID: 1442308366}
   - component: {fileID: 1442308369}
   - component: {fileID: 1442308368}
-  - component: {fileID: 1442308367}
   - component: {fileID: 1442308370}
   m_Layer: 0
   m_Name: Cube (1_3)
@@ -6997,19 +7132,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1442308367
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442308365}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1442308368
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7069,9 +7191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1475255530
 GameObject:
@@ -7084,8 +7206,8 @@ GameObject:
   - component: {fileID: 1475255531}
   - component: {fileID: 1475255534}
   - component: {fileID: 1475255533}
-  - component: {fileID: 1475255532}
   - component: {fileID: 1475255535}
+  - component: {fileID: 1475255532}
   m_Layer: 0
   m_Name: Cube (7_7)
   m_TagString: Untagged
@@ -7179,9 +7301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1502721092
 GameObject:
@@ -7287,7 +7409,6 @@ GameObject:
   - component: {fileID: 1511769194}
   - component: {fileID: 1511769197}
   - component: {fileID: 1511769196}
-  - component: {fileID: 1511769195}
   - component: {fileID: 1511769198}
   m_Layer: 0
   m_Name: Cube (1_7)
@@ -7310,19 +7431,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1511769195
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511769193}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1511769196
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7382,9 +7490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1548515531
 GameObject:
@@ -7439,8 +7547,8 @@ GameObject:
   - component: {fileID: 1557251984}
   - component: {fileID: 1557251987}
   - component: {fileID: 1557251986}
-  - component: {fileID: 1557251985}
   - component: {fileID: 1557251988}
+  - component: {fileID: 1557251985}
   m_Layer: 0
   m_Name: Cube (7_3)
   m_TagString: Untagged
@@ -7534,9 +7642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1568216485
 GameObject:
@@ -7549,7 +7657,6 @@ GameObject:
   - component: {fileID: 1568216486}
   - component: {fileID: 1568216489}
   - component: {fileID: 1568216488}
-  - component: {fileID: 1568216487}
   - component: {fileID: 1568216490}
   - component: {fileID: 1568216491}
   m_Layer: 0
@@ -7573,19 +7680,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1568216487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568216485}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1568216488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7645,8 +7739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!114 &1568216491
@@ -7858,7 +7952,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1628520553}
-  - component: {fileID: 1628520554}
   m_Layer: 0
   m_Name: 'CameraPivotPoint '
   m_TagString: Untagged
@@ -7881,19 +7974,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1628520554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628520552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e26cd9e14643814a8e64a8c30de7dda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotateTime: 2
 --- !u!1 &1707903044
 GameObject:
   m_ObjectHideFlags: 0
@@ -8091,7 +8171,6 @@ GameObject:
   - component: {fileID: 1762907402}
   - component: {fileID: 1762907405}
   - component: {fileID: 1762907404}
-  - component: {fileID: 1762907403}
   - component: {fileID: 1762907406}
   m_Layer: 0
   m_Name: Cube (6_0)
@@ -8114,19 +8193,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1762907403
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762907401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1762907404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8186,9 +8252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1778448173
 GameObject:
@@ -8203,6 +8269,7 @@ GameObject:
   - component: {fileID: 1778448176}
   - component: {fileID: 1778448175}
   - component: {fileID: 1778448178}
+  - component: {fileID: 1778448179}
   m_Layer: 0
   m_Name: WhiteChecker (11)
   m_TagString: Untagged
@@ -8297,11 +8364,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1778448179
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778448173}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1780469458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8313,8 +8398,8 @@ GameObject:
   - component: {fileID: 1780469459}
   - component: {fileID: 1780469462}
   - component: {fileID: 1780469461}
-  - component: {fileID: 1780469460}
   - component: {fileID: 1780469463}
+  - component: {fileID: 1780469460}
   m_Layer: 0
   m_Name: Cube (7_1)
   m_TagString: Untagged
@@ -8408,9 +8493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1790363644
 GameObject:
@@ -8516,8 +8601,8 @@ GameObject:
   - component: {fileID: 1819463455}
   - component: {fileID: 1819463458}
   - component: {fileID: 1819463457}
-  - component: {fileID: 1819463456}
   - component: {fileID: 1819463459}
+  - component: {fileID: 1819463456}
   m_Layer: 0
   m_Name: Cube (0_2)
   m_TagString: Untagged
@@ -8611,9 +8696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1827150018
 GameObject:
@@ -8628,6 +8713,7 @@ GameObject:
   - component: {fileID: 1827150021}
   - component: {fileID: 1827150020}
   - component: {fileID: 1827150023}
+  - component: {fileID: 1827150024}
   m_Layer: 0
   m_Name: BlackChecker (8)
   m_TagString: Untagged
@@ -8722,11 +8808,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1827150024
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827150018}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1832061698
 GameObject:
   m_ObjectHideFlags: 0
@@ -8820,6 +8924,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832061698}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1848684997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848684998}
+  - component: {fileID: 1848684999}
+  m_Layer: 0
+  m_Name: WinChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848684998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848684997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 905456876}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1848684999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848684997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3152a6bae76c7964ab71bf590d628190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1851049727
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8978,6 @@ GameObject:
   - component: {fileID: 1851049728}
   - component: {fileID: 1851049731}
   - component: {fileID: 1851049730}
-  - component: {fileID: 1851049729}
   - component: {fileID: 1851049732}
   m_Layer: 0
   m_Name: Cube (3_5)
@@ -8854,19 +9000,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1851049729
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851049727}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1851049730
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8926,9 +9059,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1899237222
 GameObject:
@@ -8941,8 +9074,8 @@ GameObject:
   - component: {fileID: 1899237223}
   - component: {fileID: 1899237226}
   - component: {fileID: 1899237225}
-  - component: {fileID: 1899237224}
   - component: {fileID: 1899237227}
+  - component: {fileID: 1899237224}
   m_Layer: 0
   m_Name: Cube (0_4)
   m_TagString: Untagged
@@ -9036,9 +9169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &1906652305
 GameObject:
@@ -9053,6 +9186,7 @@ GameObject:
   - component: {fileID: 1906652308}
   - component: {fileID: 1906652307}
   - component: {fileID: 1906652310}
+  - component: {fileID: 1906652311}
   m_Layer: 0
   m_Name: WhiteChecker (5)
   m_TagString: Untagged
@@ -9147,11 +9281,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1906652311
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906652305}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1907314829
 GameObject:
   m_ObjectHideFlags: 0
@@ -9258,6 +9410,7 @@ GameObject:
   - component: {fileID: 1938088854}
   - component: {fileID: 1938088853}
   - component: {fileID: 1938088856}
+  - component: {fileID: 1938088857}
   m_Layer: 0
   m_Name: BlackChecker (9)
   m_TagString: Untagged
@@ -9352,11 +9505,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &1938088857
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938088851}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2008446367
 GameObject:
   m_ObjectHideFlags: 0
@@ -9368,7 +9539,6 @@ GameObject:
   - component: {fileID: 2008446368}
   - component: {fileID: 2008446371}
   - component: {fileID: 2008446370}
-  - component: {fileID: 2008446369}
   - component: {fileID: 2008446372}
   m_Layer: 0
   m_Name: Cube (5_1)
@@ -9391,19 +9561,6 @@ Transform:
   m_Father: {fileID: 1023427210}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2008446369
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008446367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2008446370
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9463,9 +9620,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb44b2ed65b4abe498bffdb4d376b9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
 --- !u!1 &2034230608
 GameObject:
@@ -9480,6 +9637,7 @@ GameObject:
   - component: {fileID: 2034230611}
   - component: {fileID: 2034230610}
   - component: {fileID: 2034230613}
+  - component: {fileID: 2034230614}
   m_Layer: 0
   m_Name: BlackChecker (7)
   m_TagString: Untagged
@@ -9574,11 +9732,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 1
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &2034230614
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034230608}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2066301407
 GameObject:
   m_ObjectHideFlags: 0
@@ -9685,6 +9861,7 @@ GameObject:
   - component: {fileID: 2118768025}
   - component: {fileID: 2118768024}
   - component: {fileID: 2118768027}
+  - component: {fileID: 2118768028}
   m_Layer: 0
   m_Name: WhiteChecker (4)
   m_TagString: Untagged
@@ -9779,11 +9956,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c8fc4b9da97ee42b8211526f27cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
   _hoverMaterial: {fileID: 2100000, guid: e788b66fffebc8d479085e9ba4bb94cd, type: 2}
-  _canEatMaterial: {fileID: 0}
+  _selectMaterial: {fileID: 2100000, guid: 08ea584d1f09ef74a92cf01ad295997a, type: 2}
+  _canEatMaterial: {fileID: 2100000, guid: b6f995440c75a1b42bbe9d5a179d314e, type: 2}
   _color: 0
-  _moveTime: 1
+  _moveTime: 2
+  _moveSpeed: 1
+  _moveHeight: 1
+--- !u!54 &2118768028
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118768022}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2126241599
 GameObject:
   m_ObjectHideFlags: 0
