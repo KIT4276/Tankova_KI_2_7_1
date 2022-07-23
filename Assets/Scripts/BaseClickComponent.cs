@@ -44,9 +44,9 @@ namespace Checkers
         /// </summary>
         public void AddAdditionalMaterial(Material material, int index = 1)
         {
-            if (index < 1 || index > 2)
+            if (index < 1 || index > 3)
             {
-                Debug.LogError("Попытка добавить лишний материал. Индекс может быть равен только 1 или 2");
+                Debug.LogError("Попытка добавить лишний материал. Индекс может быть равен от 1 до 3");
                 return;
             }
             _meshMaterials[index] = material;
@@ -58,9 +58,9 @@ namespace Checkers
         /// </summary>
         public void RemoveAdditionalMaterial(int index = 1)
         {
-            if (index < 1 || index > 2)
+            if (index < 1 || index > 3)
             {
-                Debug.LogError("Попытка удалить несуществующий материал. Индекс может быть равен только 1 или 2");
+                Debug.LogError("Попытка удалить несуществующий материал. Индекс может быть равен от 1 до 3");
                 return;
             }
             _meshMaterials[index] = null;

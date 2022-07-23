@@ -25,7 +25,7 @@ namespace Checkers
             {
                 foreach (var chip in _chips)
                 {
-                    // chip.OnClickEventHandler += SelectObject;
+                    chip.OnClickEventHandler += SelectObject;
                     chip.OnChipMove += SwitchEventSystemStatus;
                 }
             }
@@ -34,46 +34,46 @@ namespace Checkers
             {
                 foreach (var cell in _cells)
                 {
-                    // cell.OnClickEventHandler += SelectObject;
-                   
+                    cell.OnClickEventHandler += SelectObject;
                 }
             }
         }
 
-        //private void SelectObject(BaseClickComponent component)
-        //{
-        //    if (component is ChipComponent chip && chip.GetColor == _currentTurn)
-        //    {
-        //        if (_selectedChip == null)
-        //        {
-        //            _selectedChip = chip;
-        //        }
+        private void SelectObject(BaseClickComponent component)
+        {
+            if (component is ChipComponent chip && chip.GetColor == _currentTurn)
+            {
+                if (_selectedChip == null)
+                {
+                    _selectedChip = chip;
+                }
 
-        //        if (_selectedChip == chip)
-        //        {
-        //            chip.ToSelectChip();
+                if (_selectedChip == chip)
+                {
+                    chip.ToSelectChip();
 
-        //            if (!chip.IsSelected)
-        //            {
-        //                _selectedChip = null;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            _selectedChip.ToSelectChip();
-        //            _selectedChip = chip;
-        //            chip.ToSelectChip();
-        //        }
-        //    }
-        //    else if (component is CellComponent cell && cell.CanBeOccupied && _selectedChip != null)
-        //    {
-        //        SwitchEventSystemStatus();
-        //        _selectedChip.MoveToNewCell(cell);
-        //        _selectedChip = null;
+                    if (!chip.IsSelected)
+                    {
+                        _selectedChip = null;
+                    }
+                }
+                else
+                {
+                    _selectedChip.ToSelectChip();
+                    _selectedChip = chip;
+                    chip.ToSelectChip();
+                }
+            }
+            else if (component is CellComponent cell && cell.CanBeOccupied && _selectedChip != null)
+            {
+                SwitchEventSystemStatus();
+                _selectedChip.MoveToNewCell(cell);
+                _selectedChip = null;
 
-        //        ApplyNextTurn();
-        //    }
-        //}
+                //ApplyNextTurn();
+            }
+        }
+        
 
         private void SwitchEventSystemStatus()
         {
