@@ -9,7 +9,8 @@ namespace Checkers
     {
         [SerializeField][Range(1,10)]
         private  float _rotateTime = 2f;
-        public Quaternion _startRotation;
+        Quaternion _start;
+        Quaternion _target;
 
         public static CameraControl Self;
 
@@ -17,16 +18,18 @@ namespace Checkers
         {
             Self = this;
         }
-        public  void CameraViewChange() 
+        public  void CameraViewChange() // почему при следующем ходе не срабатывает поворот?
         {
+            _start = transform.rotation;
+            _target = new Quaternion(0f, 180f, 0f, 0f);
+
             StartCoroutine(CameraRotate()); 
         }
 
         private IEnumerator CameraRotate()  
         {
-            var _start = transform.rotation;
-            var target = new Quaternion(0f, 180f, 0f, 0f);
-            yield return Rotate(_start, target, _rotateTime); 
+            
+            yield return Rotate(_start, _target, _rotateTime); 
         }
 
         private IEnumerator Rotate(Quaternion start, Quaternion target, float time)
@@ -35,7 +38,7 @@ namespace Checkers
             while (currentTime < time)
             {
                 transform.rotation = Quaternion.Lerp(start, target, Mathf.Pow(currentTime - _rotateTime*Time.deltaTime, 2));
-               // transform.rotation = Quaternion.Lerp(start, target, 1 - (time - currentTime) / time);   // если делать так,
+               // transform.rotation = Quaternion.Lerp(start, _target, 1 - (time - currentTime) / time);   // если делать так,
                // то в этом проекте скорость вращения уменьшается во время этого вращения, а в отдельном проекте работает отлично.
                // почему?
 

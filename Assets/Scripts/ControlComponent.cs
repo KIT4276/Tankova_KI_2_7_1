@@ -8,10 +8,9 @@ namespace Checkers
     public class ControlComponent : MonoBehaviour
     {
 
-        ChipComponent baseClickComponent = new ChipComponent();
         private ChipComponent _selectedChip;
 
-        [SerializeField] protected ColorType _currentTurn;
+        [SerializeField] public ColorType _currentTurn;
         [SerializeField] private EventSystem _eventSystem;
         
 
@@ -22,7 +21,7 @@ namespace Checkers
             _cells = FindObjectsOfType<CellComponent>();
             _chips = FindObjectsOfType<ChipComponent>();
 
-            baseClickComponent.OnFocusEventHandler += (q, qq) => { };
+            //ChipComponent.Self.OnFocusEventHandler += (q, qq) => { }; // почему тут приходит null?
         }
         private void Start()
         {
@@ -41,9 +40,8 @@ namespace Checkers
         private void SelectObject(BaseClickComponent component)
         {
 
-            if (component is ChipComponent chip )// если выбрана шашка и её цвет ходит
+            if (component is ChipComponent chip)
             {
-               // Debug.Log("если выбрана шашка и её цвет ходит");
                 if (_selectedChip == null)
                 {
                     _selectedChip = chip;
@@ -66,10 +64,9 @@ namespace Checkers
                 }
             }
             
-            else if (component is CellComponent cell && cell.isEmptyToMove && _selectedChip != null) // тут в _selectedChip приходит null
+            else if (component is CellComponent cell && cell.isEmptyToMove && _selectedChip != null) 
 
             {
-                //Debug.Log("если выбрана клетка и она пуста и выбранная фишка не нал");
                 Switch();
                 _selectedChip.Move(cell);
                 _selectedChip = null;
@@ -83,7 +80,9 @@ namespace Checkers
 
         private void NextTurn()
         {
+
             _currentTurn = _currentTurn == ColorType.Black ? ColorType.White : ColorType.Black;
+           
 
             CameraControl.Self.CameraViewChange();
         }

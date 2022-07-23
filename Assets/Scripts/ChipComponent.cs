@@ -58,9 +58,11 @@ namespace Checkers
         {
             var startPos = transform.position;
             target = new Vector3(target.x, startPos.y, target.z);
-            yield return MoveFromTo(transform.position, target, _moveTime);
 
             TryToEat();
+            yield return MoveFromTo(transform.position, target, _moveTime);
+
+            
 
             transform.position = target;
             PairChipWithCell();
@@ -122,10 +124,10 @@ namespace Checkers
 
         private bool TryToEat() 
         {
-            if (Physics.Raycast(transform.position, Vector3.down, out var hitChip, 5))
+            if (Physics.Raycast(transform.position, Vector3.down, out var hitChip, 5)) // что передаётся в hitChip??
             {
-                var chip = hitChip.collider.GetComponent<ChipComponent>();
-                if (chip != null)
+                var chip = hitChip.collider.GetComponent<ChipComponent>(); 
+                if (chip != null) // почему сюда не заходит?
                 {
                     chip.Eat();
                     return true;
@@ -154,6 +156,6 @@ namespace Checkers
             Pair = null;
             gameObject.SetActive(false);
         }
-        
+
     }
 }
