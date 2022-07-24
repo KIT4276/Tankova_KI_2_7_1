@@ -6,9 +6,7 @@ namespace Checkers
 {
     public abstract class BaseClickComponent : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-        //Меш игрового объекта
         private MeshRenderer _mesh;
-        //Список материалов на меше объекта
         private Material[] _meshMaterials = new Material[4];
 
         [Tooltip("Цвет клетки при наведении курсора"), SerializeField] 
