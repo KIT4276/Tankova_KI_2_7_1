@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Checkers
@@ -9,7 +7,6 @@ namespace Checkers
     {
         [SerializeField] private ColorType _currentTurn;
         [SerializeField] private EventSystem _eventSystem;
-        //[SerializeField] private Text _finishScreen;// пока без этого
 
         private ChipComponent _selectedChip;
 
@@ -26,7 +23,7 @@ namespace Checkers
                 foreach (var chip in _chips)
                 {
                     chip.OnClickEventHandler += SelectObject;
-                    chip.OnChipMove += SwitchEventSystemStatus;
+                    chip.ChipMove += SwitchEventSystemStatus;
                 }
             }
 
@@ -37,6 +34,10 @@ namespace Checkers
                     cell.OnClickEventHandler += SelectObject;
                 }
             }
+        }
+        private void Update()
+        {
+            CheckWin();
         }
 
         private void SelectObject(BaseClickComponent component)
@@ -67,17 +68,27 @@ namespace Checkers
             else if (component is CellComponent cell && cell.CanBeOccupied && _selectedChip != null)
             {
                 SwitchEventSystemStatus();
-                _selectedChip.MoveToNewCell(cell);
+                _selectedChip.Move(cell);
                 _selectedChip = null;
 
-                //ApplyNextTurn();
+                NextTurn();
             }
         }
-        
 
-        private void SwitchEventSystemStatus()
+        private void SwitchEventSystemStatus() => _eventSystem.enabled = !_eventSystem.enabled;
+
+        private void NextTurn()
         {
-            _eventSystem.enabled = !_eventSystem.enabled;
+            _currentTurn = _currentTurn == ColorType.Black ? ColorType.White : ColorType.Black;
+            CameraControl.Self.CameraViewChange(); 
+        }
+        private void CheckWin()
+        {
+            if (WinCheck.Self.GetCheck == true)
+            {
+                Debug.Log("Победа");
+                UnityEditor.EditorApplication.isPaused = true;
+            }
         }
     }
 }

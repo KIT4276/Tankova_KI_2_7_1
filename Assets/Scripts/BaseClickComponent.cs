@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -36,8 +35,6 @@ namespace Checkers
         public BaseClickComponent Pair { get; set; }
 
         public bool IsSelected { get; protected set; }
-
-
 
         /// <summary>
         /// Добавляет дополнительный материал
@@ -77,7 +74,6 @@ namespace Checkers
         /// </summary>
         public event FocusEventHandler OnFocusEventHandler;
 
-
         //При навадении на объект мышки, вызывается данный метод
         //При наведении на фишку, должна подсвечиваться клетка под ней
         //При наведении на клетку - подсвечиваться сама клетка
@@ -113,16 +109,14 @@ namespace Checkers
 
         protected void ToHighlight(CellComponent component, bool isSelect)  
         {
-                if (isSelect)
-                {
-                    component.AddAdditionalMaterial(_hoverMaterial, 1);
-                }
-                else
-                {
-                    component.RemoveAdditionalMaterial(1);
-                }
-            
-            
+            if (isSelect)
+            {
+               component.AddAdditionalMaterial(_hoverMaterial, 1);
+            }
+            else
+            {
+               component.RemoveAdditionalMaterial(1);
+            }
         }
     }
 

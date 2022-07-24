@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Checkers
 {
-    public class WinCheck : MonoBehaviour // не моё
+    public class WinCheck : MonoBehaviour 
     {
         public static WinCheck Self;
 

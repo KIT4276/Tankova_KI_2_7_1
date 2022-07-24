@@ -29,15 +29,10 @@ namespace Checkers
             if (Physics.Raycast(transform.position, direction, out var hit, 2))
             {
                 var cell = hit.collider.GetComponent<CellComponent>();
-                //if (_neighbors.ContainsKey(neighborType)) // пока такой костыль, чтобы не вылетало, пока не найду, как починить
-               // {
-                    if (cell != null)
-                    {
-                        Debug.Log("cell " + cell);
-                        Debug.Log("neighborType " + neighborType);
-                        _neighbors.Add(neighborType, cell); // тут ошибка "данный ключ отсутствует в словаре"
-                    }
-               // }
+                if (cell != null)
+                {
+                    _neighbors.Add(neighborType, cell); 
+                }
             }
         }
 

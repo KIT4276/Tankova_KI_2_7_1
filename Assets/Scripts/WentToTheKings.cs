@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Checkers
 {
@@ -9,7 +7,26 @@ namespace Checkers
         [Tooltip("Цветовая сторона игрового объекта"), SerializeField]
         private ColorType _color;
 
-        public static WentToTheKings instance;
+        public static WentToTheKings Self;
         private BoxCollider _collider;
+
+        private void Start()
+        {
+            Self = this;
+            _collider = GetComponent<BoxCollider>();
+            _collider.isTrigger = true;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other != null)
+            {
+                var chip = other.GetComponent<ChipComponent>();
+                if (chip.GetColor == _color)
+                {
+                    WinCheck.Self.GetCheck = true;
+                }
+            }
+        }
     }
 }

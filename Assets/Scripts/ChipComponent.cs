@@ -7,15 +7,13 @@ namespace Checkers
 {
     public class ChipComponent : BaseClickComponent
     {
-        [SerializeField] [Range(1, 5)] private float _moveTime = 2;
         [SerializeField] [Range(1, 5)] private float _moveSpeed = 1;
-        //[SerializeField] [Range(0, 5)] private float _moveHeight = 1; // надо ли оно мне?
 
-        public event Action OnChipMove;
+        public event Action ChipMove;
 
         private CapsuleCollider _collider;
 
-        private bool _cantEatColor = true;
+        private bool _cantEat = true;
 
         protected override void Start()
         {
@@ -69,9 +67,6 @@ namespace Checkers
                 PossibleMoves();
             }
         }
-        /// <summary>
-        /// ////////////////////////////////////////////////////////////////////////////////
-        /// </summary>
 
         private void PossibleMoves()
         {
@@ -85,7 +80,6 @@ namespace Checkers
                     a = NeighborType.BottomLeft;
                     b = NeighborType.BottomRight;
                 }
-
 
                 if (cell.TryGetNeighbor(a, out var leftCell))
                 {
@@ -126,53 +120,89 @@ namespace Checkers
 
         public void ToHighlightEat()
         {
-            if (_cantEatColor)
+            if (_cantEat)
             {
-                _cantEatColor = false;
+                _cantEat = false;
                 AddAdditionalMaterial(_canEatMaterial, 3);
             }
             else
             {
-                _cantEatColor = true;
+                _cantEat = true;
                 RemoveAdditionalMaterial(3);
             }
         }
 
-        public void MoveToNewCell(CellComponent cell) // это вариант Кирилла, он лучше, чем у меня
+        public void Move(CellComponent cell) // это вариант Кирилла, не знаю, как лучше
         {
             ToSelectChip();
-            var newPosition = cell.transform.position;
-            StartCoroutine(Move(newPosition));
+            var target = cell.transform.position;
+            StartCoroutine(Move(target));
         }
 
-        private IEnumerator Move(Vector3 newPosition)
+
+        //public void Move(CellComponent cell)
+        //{
+        //    ToSelectChip();
+        //    var target = cell.transform.position;
+        //    StartCoroutine(Moving(_moveTime, target));
+        //}
+        //private IEnumerator Moving(float time, Vector3 target)
+        //{
+        //    var startPos = transform.position;
+        //    target = new Vector3(target.x, startPos.y, target.z);
+
+        //    yield return MoveFromTo(transform.position, target, _moveTime);
+
+        //    TryEat();
+
+        //    transform.position = target;
+        //    PairChipWithCell();
+        //    ChipMove?.Invoke();
+        //}
+        //private IEnumerator MoveFromTo(Vector3 start, Vector3 target, float time)
+        //{
+        //    var currentTime = 0f;
+        //    while (currentTime < time)
+        //    {
+        //        transform.position = Vector3.Lerp(transform.position, target, 1 - (time - currentTime) / time);
+        //        currentTime += Time.deltaTime;
+        //        yield return null;
+        //    }
+        //    transform.position = target;
+        //    PairChipWithCell();
+        //    ChipMove?.Invoke();
+        //}
+
+
+        private IEnumerator Move(Vector3 target)
         {
-            var lerpTime = 0f;
+            var currentTime = 0f;
             var startPos = transform.position;
-            newPosition = new Vector3(newPosition.x, startPos.y , newPosition.z);
-            while (lerpTime < _moveTime / 2)
+            target = new Vector3(target.x, startPos.y, target.z);
+            while (currentTime < 2 )
             {
-                transform.position = Vector3.Lerp(startPos, newPosition, lerpTime / _moveTime);
-                lerpTime += _moveSpeed * Time.deltaTime;
+                transform.position = Vector3.Lerp(startPos, target, currentTime / 2);
+                currentTime += _moveSpeed * Time.deltaTime;
                 yield return null;
             }
 
             TryEat();
-            lerpTime = 0f;
-            newPosition = new Vector3(newPosition.x, startPos.y, newPosition.z);
+            currentTime = 0f;
+            target = new Vector3(target.x, startPos.y, target.z);
             startPos = transform.position;
-            while (lerpTime < _moveTime / 2)
+            while (currentTime < 2 )
             {
-                transform.position = Vector3.Lerp(startPos, newPosition, lerpTime / _moveTime);
-                lerpTime += _moveSpeed * Time.deltaTime;
+                transform.position = Vector3.Lerp(startPos, target, currentTime / 2);
+                currentTime += _moveSpeed * Time.deltaTime;
                 yield return null;
             }
 
-            transform.position = newPosition;
-            PairChipWithCell();
-            OnChipMove?.Invoke();
+            transform.position = target;
+            PairChipWithCell(); 
+            ChipMove?.Invoke();
+
         }
-        private bool TryEat()
+        private bool TryEat() // почему не работает?
         {
             if (Physics.Raycast(transform.position, Vector3.down, out var hitChip, 5))
             {
@@ -193,6 +223,7 @@ namespace Checkers
             Pair.Pair = null;
             Pair = null;
             gameObject.SetActive(false);
+            //Destroy(this);
         }
     }
 }
