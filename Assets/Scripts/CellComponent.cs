@@ -15,36 +15,10 @@ namespace Checkers
 
         public GameObject _pairOfCell; // фишка, которая стоит на клетке
 
-
-        //private void OnTriggerEnter(Collider other)
-        //{
-        //    Debug.Log("OnTriggerEnter Cell");
-        //    Pair = other.gameObject;
-        //    Debug.Log("Pair for cell " + Pair);
-
-        //    //if (TryGetComponent(out other))
-        //    //{
-        //    //    _pairOfCell = other.gameObject;
-               
-               
-        //    //    var chip = _pairOfCell.GetComponent<ChipComponent>(); // почему в тут null?
-        //    //    if (chip != null)
-        //    //    {
-        //    //        //if (chip.GetColor == _color) // почему в chip.GetColor null?
-        //    //        //{
-        //    //        Pair = _pairOfCell;
-        //    //        Debug.Log("chip  " + Pair);
-        //    //        //}
-        //    //    }
-
-        //    //}
-        //}
-        
         protected override void Start()
         {
             _neighbors = new Dictionary<NeighborType, CellComponent>();
             base.Start();
-
 
             AddNeighbor(NeighborType.TopLeft, new Vector3(-1, 0, 1));
             AddNeighbor(NeighborType.TopRight, new Vector3(1, 0, 1));
@@ -54,10 +28,9 @@ namespace Checkers
             OnFocusEventHandler += ToHighlight;
         }
 
-        
         private void AddNeighbor(NeighborType neighborType, Vector3 direction)
         {
-            if (Physics.Raycast(transform.position, direction, out var hit, 2))
+            if (Physics.Raycast(transform.position, direction, out var hit, 5))
             {
                 var cell = hit.collider.GetComponent<CellComponent>();
                 if (cell != null)
@@ -65,8 +38,6 @@ namespace Checkers
                     _neighbors.Add(neighborType, cell); 
                 }
             }
-
-
         }
 
         public bool TryGetNeighbor(NeighborType type, out CellComponent component) => _neighbors.TryGetValue(type, out component);
@@ -96,7 +67,14 @@ namespace Checkers
             }
         }
 
-       
+       /// <summary>
+        /// Конфигурирование связей клеток
+        /// </summary>
+		public void Configuration(Dictionary<NeighborType, CellComponent> neighbors)
+		{
+            if (_neighbors != null) return;
+            _neighbors = neighbors;
+		}
     }
 
     /// <summary>

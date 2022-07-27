@@ -15,76 +15,28 @@ namespace Checkers
 
         private bool _cantEat = true;
 
-        public CellComponent _cell;
+        private CellComponent _cell;
 
 
-        public GameObject _pairOfChip; // клетка, на которой стоит фишка
+        //public GameObject _pairOfChip; // клетка, на которой стоит фишка
 
-        public static ChipComponent Self;
-
-        //private void OnTriggerEnter(Collider other)
-        //{
-        //    Debug.Log("OnTriggerEnter Chip");
-        //    Pair = other.gameObject;
-        //    Debug.Log("Pair for chip " + Pair);
-
-        //    //if (TryGetComponent(out other))
-        //    //{
-        //    //    _pairOfChip = other.gameObject;
-
-
-
-        //    //    var cell = _pairOfChip.gameObject.GetComponent<CellComponent>();// почему в тут null?
-        //    //    if (cell != null)
-        //    //    {
-        //    //        Debug.Log("cell" + cell);
-
-        //    //        //if (cell.GetColor == _color) // почему в cell.GetColor null?
-        //    //        // {
-        //    //        Pair = cell.gameObject;
-        //    //        //}
-        //    //    }
-
-        //    //}
-        //}
+        //public static ChipComponent Self;
 
 
         protected override void Start()
         {
             base.Start();
 
-            Self = this;
-            //if (_cell is CellComponent cell)
-            //{
-            //    _cell = Pair.GetComponent<CellComponent>();  // сомнения
-            //}
+            //Self = this;
+            if (_cell is CellComponent cell)
+            {
+                _cell = Pair.GetComponent<CellComponent>();  // сомнения
+            }
 
             _collider = GetComponent<CapsuleCollider>();
             _collider.isTrigger = true;
-
-           // PairChipWithCell();
-
-            //OnFocusEventHandler += ToHighlight;
         }
-       // private void PairChipWithCell() // тупо спёрто у Кирилла, и это не норм
-        //{
-            //if (Pair != null)
-            //{
-            //    Pair.Pair = null;
-            //}
-            //if (Physics.Raycast(transform.position, Vector3.down, out var hit, 5f))
-            //{
-            //    var cell = hit.collider.gameObject.GetComponent<CellComponent>();
-            //    if (cell != null)
-            //    {
-            //        Pair = cell;
-            //        cell.Pair = this;
-            //    }
-            //}
-
-        //}
-
-        
+     
         public override void OnPointerEnter(PointerEventData eventData)
         {
             CallBackEvent((CellComponent)_cell, true);
@@ -111,21 +63,22 @@ namespace Checkers
             }
         }
 
-        private void PossibleMoves()
+        private void PossibleMoves() // РАЗОБРАТЬСЯ!
         {
-            if (_cell is CellComponent cell)
+            if (Pair is CellComponent cell)
             {
-                NeighborType a = NeighborType.TopLeft;
-                NeighborType b = NeighborType.TopRight;
+                NeighborType Left = NeighborType.TopLeft;
+                NeighborType Righ = NeighborType.TopRight;
 
                 if (GetColor == ColorType.Black)
                 {
-                    a = NeighborType.BottomLeft;
-                    b = NeighborType.BottomRight;
+                    Left = NeighborType.BottomLeft;
+                    Righ = NeighborType.BottomRight;
                 }
 
-                if (cell.TryGetNeighbor(a, out var leftCell))
+                if (cell.TryGetNeighbor(Left, out var leftCell))
                 {
+                    Debug.Log("TryGetNeighbor Left");
                     if (leftCell.IsFree)
                     {
                         leftCell.ToHighlightCell();
@@ -133,18 +86,19 @@ namespace Checkers
                     }
                     else
                     {
-                        //if (leftCell.Pair.GetColor != GetColor &&
-                        //    leftCell.TryGetNeighbor(a, out var leftOverEnemy) &&
-                        //    leftOverEnemy.IsFree)
-                        //{
-                        //    (leftCell.Pair as ChipComponent)?.ToHighlightEat();
-                        //    leftOverEnemy.ToHighlightCell();
-                        //    Debug.Log("leftCell.Is not Free");
-                        //}
+                        if (leftCell.Pair.GetColor != GetColor &&
+                            leftCell.TryGetNeighbor(Left, out var leftOverEnemy) &&
+                            leftOverEnemy.IsFree)
+                        {
+                            (leftCell.Pair as ChipComponent)?.ToHighlightEat();
+                            leftOverEnemy.ToHighlightCell();
+                            Debug.Log("leftCell.Is not Free");
+                        }
                     }
                 }
-                if (cell.TryGetNeighbor(b, out var rightCell))
+                if (cell.TryGetNeighbor(Righ, out var rightCell))
                 {
+                    Debug.Log("TryGetNeighbor Righ");
                     if (rightCell.IsFree)
                     {
                         rightCell.ToHighlightCell();
@@ -152,14 +106,14 @@ namespace Checkers
                     }
                     else
                     {
-                        //if (rightCell.Pair.GetColor != GetColor &&
-                        //    rightCell.TryGetNeighbor(b, out var rightOverEnemy) &&
-                        //    rightOverEnemy.IsFree)
-                        //{
-                        //    (rightCell.Pair as ChipComponent)?.ToHighlightEat();
-                        //    rightOverEnemy.ToHighlightCell();
-                        //    Debug.Log("leftCell.Is not Free");
-                        //}
+                        if (rightCell.Pair.GetColor != GetColor &&
+                            rightCell.TryGetNeighbor(Righ, out var rightOverEnemy) &&
+                            rightOverEnemy.IsFree)
+                        {
+                            (rightCell.Pair as ChipComponent)?.ToHighlightEat();
+                            rightOverEnemy.ToHighlightCell();
+                            Debug.Log("leftCell.Is not Free");
+                        }
                     }
                 }
             }

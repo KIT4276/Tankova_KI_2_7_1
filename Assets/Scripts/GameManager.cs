@@ -53,7 +53,7 @@ namespace Checkers
                 {
                     chip.ToSelectChip();
 
-                    if (!chip.IsSelected)
+                    if (chip.IsSelected != true)
                     {
                         _selectedChip = null;
                     }
@@ -67,11 +67,14 @@ namespace Checkers
             }
             else if (component is CellComponent cell && cell.CanBeOccupied && _selectedChip != null)
             {
+                cell.RemoveAdditionalMaterial(1); // почему не работает?
+
                 SwitchEventSystemStatus();
                 _selectedChip.Move(cell);
                 _selectedChip = null;
 
                 NextTurn();
+                
             }
         }
 
@@ -80,7 +83,7 @@ namespace Checkers
         private void NextTurn()
         {
             _currentTurn = _currentTurn == ColorType.Black ? ColorType.White : ColorType.Black;
-            CameraControl.Self.CameraViewChange(); 
+            CameraControl.Self.CameraViewChange();
         }
         private void CheckWin()
         {
