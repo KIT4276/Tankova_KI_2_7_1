@@ -19,7 +19,9 @@ namespace Checkers
         protected Material _canEatMaterial;
 
         [Tooltip("Цветовая сторона игрового объекта"), SerializeField]
-        private ColorType _color;
+        protected ColorType _color;
+
+        public bool IsSelected { get; protected set; }
 
         /// <summary>
         /// Возвращает цветовую сторону игрового объекта
@@ -32,7 +34,20 @@ namespace Checkers
         /// <remarks> У клеток пара - фишка, у фишек - клетка</remarks>
         public BaseClickComponent Pair { get; set; }
 
-        public bool IsSelected { get; protected set; }
+       
+
+        protected void OnTriggerEnter(Collider other)
+        {
+            if(other.TryGetComponent<ChipComponent>(out ChipComponent chipComponent))
+            {
+                Pair = chipComponent;
+            }
+
+            if (other.TryGetComponent<CellComponent>(out CellComponent cellComponent))
+            {
+                Pair = cellComponent;
+            }
+        }
 
         /// <summary>
         /// Добавляет дополнительный материал

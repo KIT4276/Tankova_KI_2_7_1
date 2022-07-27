@@ -15,41 +15,84 @@ namespace Checkers
 
         private bool _cantEat = true;
 
+        public CellComponent _cell;
+
+
+        public GameObject _pairOfChip; // клетка, на которой стоит фишка
+
+        public static ChipComponent Self;
+
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    Debug.Log("OnTriggerEnter Chip");
+        //    Pair = other.gameObject;
+        //    Debug.Log("Pair for chip " + Pair);
+
+        //    //if (TryGetComponent(out other))
+        //    //{
+        //    //    _pairOfChip = other.gameObject;
+
+
+
+        //    //    var cell = _pairOfChip.gameObject.GetComponent<CellComponent>();// почему в тут null?
+        //    //    if (cell != null)
+        //    //    {
+        //    //        Debug.Log("cell" + cell);
+
+        //    //        //if (cell.GetColor == _color) // почему в cell.GetColor null?
+        //    //        // {
+        //    //        Pair = cell.gameObject;
+        //    //        //}
+        //    //    }
+
+        //    //}
+        //}
+
+
         protected override void Start()
         {
             base.Start();
 
+            Self = this;
+            //if (_cell is CellComponent cell)
+            //{
+            //    _cell = Pair.GetComponent<CellComponent>();  // сомнения
+            //}
+
             _collider = GetComponent<CapsuleCollider>();
             _collider.isTrigger = true;
 
-            PairChipWithCell();
+           // PairChipWithCell();
 
-            OnFocusEventHandler += ToHighlight;
+            //OnFocusEventHandler += ToHighlight;
         }
-        private void PairChipWithCell() // тупо спёрто у Кирилла
-        {
-            if (Pair != null)
-            {
-                Pair.Pair = null;
-            }
-            if (Physics.Raycast(transform.position, Vector3.down, out var hit, 5f))
-            {
-                var cell = hit.collider.gameObject.GetComponent<CellComponent>();
-                if (cell != null)
-                {
-                    Pair = cell;
-                    cell.Pair = this;
-                }
-            }
-        }
+       // private void PairChipWithCell() // тупо спёрто у Кирилла, и это не норм
+        //{
+            //if (Pair != null)
+            //{
+            //    Pair.Pair = null;
+            //}
+            //if (Physics.Raycast(transform.position, Vector3.down, out var hit, 5f))
+            //{
+            //    var cell = hit.collider.gameObject.GetComponent<CellComponent>();
+            //    if (cell != null)
+            //    {
+            //        Pair = cell;
+            //        cell.Pair = this;
+            //    }
+            //}
+
+        //}
+
+        
         public override void OnPointerEnter(PointerEventData eventData)
         {
-            CallBackEvent((CellComponent)Pair, true);
+            CallBackEvent((CellComponent)_cell, true);
         }
 
         public override void OnPointerExit(PointerEventData eventData)
         {
-            CallBackEvent((CellComponent)Pair, false);
+            CallBackEvent((CellComponent)_cell, false);
         }
 
         public void ToSelectChip()
@@ -70,7 +113,7 @@ namespace Checkers
 
         private void PossibleMoves()
         {
-            if (Pair is CellComponent cell)
+            if (_cell is CellComponent cell)
             {
                 NeighborType a = NeighborType.TopLeft;
                 NeighborType b = NeighborType.TopRight;
@@ -86,16 +129,18 @@ namespace Checkers
                     if (leftCell.IsFree)
                     {
                         leftCell.ToHighlightCell();
+                        Debug.Log("leftCell.IsFree");
                     }
                     else
                     {
-                        if (leftCell.Pair.GetColor != GetColor &&
-                            leftCell.TryGetNeighbor(a, out var leftOverEnemy) &&
-                            leftOverEnemy.IsFree)
-                        {
-                            (leftCell.Pair as ChipComponent)?.ToHighlightEat();
-                            leftOverEnemy.ToHighlightCell();
-                        }
+                        //if (leftCell.Pair.GetColor != GetColor &&
+                        //    leftCell.TryGetNeighbor(a, out var leftOverEnemy) &&
+                        //    leftOverEnemy.IsFree)
+                        //{
+                        //    (leftCell.Pair as ChipComponent)?.ToHighlightEat();
+                        //    leftOverEnemy.ToHighlightCell();
+                        //    Debug.Log("leftCell.Is not Free");
+                        //}
                     }
                 }
                 if (cell.TryGetNeighbor(b, out var rightCell))
@@ -103,16 +148,18 @@ namespace Checkers
                     if (rightCell.IsFree)
                     {
                         rightCell.ToHighlightCell();
+                        Debug.Log("rightCell.IsFree");
                     }
                     else
                     {
-                        if (rightCell.Pair.GetColor != GetColor &&
-                            rightCell.TryGetNeighbor(b, out var rightOverEnemy) &&
-                            rightOverEnemy.IsFree)
-                        {
-                            (rightCell.Pair as ChipComponent)?.ToHighlightEat();
-                            rightOverEnemy.ToHighlightCell();
-                        }
+                        //if (rightCell.Pair.GetColor != GetColor &&
+                        //    rightCell.TryGetNeighbor(b, out var rightOverEnemy) &&
+                        //    rightOverEnemy.IsFree)
+                        //{
+                        //    (rightCell.Pair as ChipComponent)?.ToHighlightEat();
+                        //    rightOverEnemy.ToHighlightCell();
+                        //    Debug.Log("leftCell.Is not Free");
+                        //}
                     }
                 }
             }
@@ -164,7 +211,7 @@ namespace Checkers
             }
 
             transform.position = target;
-            PairChipWithCell(); 
+            //PairChipWithCell(); 
             ChipMove?.Invoke();
         }
         private bool TryEat() // почему не работает?
@@ -182,6 +229,7 @@ namespace Checkers
             }
             return false;
         }
+
 
         public void Eat()
         {

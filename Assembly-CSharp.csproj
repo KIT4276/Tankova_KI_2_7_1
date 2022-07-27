@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{76FBFC56-9741-D0FE-54A2-443183D8FB0F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -70,9 +69,9 @@
     <Compile Include="Assets\Scripts\CellComponent.cs" />
     <Compile Include="Assets\Scripts\ChipComponent.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\TrtiggerComponent.cs" />
     <Compile Include="Assets\Scripts\WentToTheKings.cs" />
     <Compile Include="Assets\Scripts\WinCheck.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -629,8 +628,7 @@
       <HintPath>D:/NETOLOGY/Tankova_KI_2_7_1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,18 +12,49 @@ namespace Checkers
         public bool CanBeOccupied => !_canSelect && IsFree;
         private bool _canSelect = true;
 
+
+        public GameObject _pairOfCell; // фишка, которая стоит на клетке
+
+
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    Debug.Log("OnTriggerEnter Cell");
+        //    Pair = other.gameObject;
+        //    Debug.Log("Pair for cell " + Pair);
+
+        //    //if (TryGetComponent(out other))
+        //    //{
+        //    //    _pairOfCell = other.gameObject;
+               
+               
+        //    //    var chip = _pairOfCell.GetComponent<ChipComponent>(); // почему в тут null?
+        //    //    if (chip != null)
+        //    //    {
+        //    //        //if (chip.GetColor == _color) // почему в chip.GetColor null?
+        //    //        //{
+        //    //        Pair = _pairOfCell;
+        //    //        Debug.Log("chip  " + Pair);
+        //    //        //}
+        //    //    }
+
+        //    //}
+        //}
+        
         protected override void Start()
         {
             _neighbors = new Dictionary<NeighborType, CellComponent>();
             base.Start();
-            OnFocusEventHandler += ToHighlight;
+
 
             AddNeighbor(NeighborType.TopLeft, new Vector3(-1, 0, 1));
             AddNeighbor(NeighborType.TopRight, new Vector3(1, 0, 1));
             AddNeighbor(NeighborType.BottomLeft, new Vector3(-1, 0, -1));
             AddNeighbor(NeighborType.BottomRight, new Vector3(1, 0, -1));
+
+            OnFocusEventHandler += ToHighlight;
         }
 
+        
         private void AddNeighbor(NeighborType neighborType, Vector3 direction)
         {
             if (Physics.Raycast(transform.position, direction, out var hit, 2))
@@ -34,6 +65,8 @@ namespace Checkers
                     _neighbors.Add(neighborType, cell); 
                 }
             }
+
+
         }
 
         public bool TryGetNeighbor(NeighborType type, out CellComponent component) => _neighbors.TryGetValue(type, out component);
@@ -62,6 +95,8 @@ namespace Checkers
                 RemoveAdditionalMaterial(2);
             }
         }
+
+       
     }
 
     /// <summary>
