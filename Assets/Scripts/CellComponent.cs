@@ -22,8 +22,8 @@ namespace Checkers
 
             AddNeighbor(NeighborType.TopLeft, new Vector3(-1, 0, 1));
             AddNeighbor(NeighborType.TopRight, new Vector3(1, 0, 1));
-            AddNeighbor(NeighborType.BottomLeft, new Vector3(-1, 0, -1));
-            AddNeighbor(NeighborType.BottomRight, new Vector3(1, 0, -1));
+            AddNeighbor(NeighborType.BottomLeft, new Vector3(1, 0, -1));
+            AddNeighbor(NeighborType.BottomRight, new Vector3(-1, 0, -1));
 
             OnFocusEventHandler += ToHighlight;
         }
