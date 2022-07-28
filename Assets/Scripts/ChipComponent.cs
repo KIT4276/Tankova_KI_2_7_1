@@ -17,11 +17,9 @@ namespace Checkers
 
         private CellComponent _cell;
 
-
         //public GameObject _pairOfChip; // клетка, на которой стоит фишка
 
         //public static ChipComponent Self;
-
 
         protected override void Start()
         {
@@ -61,6 +59,8 @@ namespace Checkers
                 AddAdditionalMaterial(_selectMaterial, 2);
                 PossibleMoves();
             }
+
+            CellComponent.Self.SetNeibor(Pair, _color);
         }
 
         private void PossibleMoves() // РАЗОБРАТЬСЯ!

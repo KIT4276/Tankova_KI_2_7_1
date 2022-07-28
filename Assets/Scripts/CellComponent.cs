@@ -11,31 +11,64 @@ namespace Checkers
         public bool IsFree => Pair == null;
         public bool CanBeOccupied => !_canSelect && IsFree;
         private bool _canSelect = true;
+        private CellComponent[] _blackCells;
 
+        //public GameObject _pairOfCell; // фишка, которая стоит на клетке
 
-        public GameObject _pairOfCell; // фишка, которая стоит на клетке
+        public static CellComponent Self;
 
         protected override void Start()
         {
-            _neighbors = new Dictionary<NeighborType, CellComponent>();
-            base.Start();
+            Self = this;
 
-            AddNeighbor(NeighborType.TopLeft, new Vector3(-1, 0, 1));
-            AddNeighbor(NeighborType.TopRight, new Vector3(1, 0, 1));
-            AddNeighbor(NeighborType.BottomLeft, new Vector3(1, 0, -1));
-            AddNeighbor(NeighborType.BottomRight, new Vector3(-1, 0, -1));
+            _blackCells = FindObjectsOfType<CellComponent>(); //заполнили массив снова, потому что я не знаю, как его вытащить из GameManager
+
+            _neighbors = new Dictionary<NeighborType, CellComponent>();
+
+            base.Start();
 
             OnFocusEventHandler += ToHighlight;
         }
 
-        private void AddNeighbor(NeighborType neighborType, Vector3 direction)
+        public void SetNeibor(BaseClickComponent pair, ColorType colorType) // Пробуем
         {
-            if (Physics.Raycast(transform.position, direction, out var hit, 5))
+            _neighbors.Clear();
+
+            var KeyCel = pair.gameObject;
+
+            var topLeftPosition = KeyCel.transform.position + new Vector3(-1, 0, 1);
+            var topRightPosition = KeyCel.transform.position + new Vector3(1, 0, 1);
+            var bottomLeftPosition = KeyCel.transform.position + new Vector3(1, 0, -1);
+            var bottomRightPosition = KeyCel.transform.position + new Vector3(-1, 0, -1);
+           
+            if (colorType == ColorType.White)
             {
-                var cell = hit.collider.GetComponent<CellComponent>();
-                if (cell != null)
+                foreach (var item in _blackCells) 
                 {
-                    _neighbors.Add(neighborType, cell); 
+                    Debug.Log("topRightPosition  " + topRightPosition);
+                    Debug.Log("item  " + item.transform.position);
+                    if (item.transform.position == topLeftPosition) // почему не заходит сюда?
+                    {
+                        _neighbors.Add(NeighborType.TopLeft, item);
+                    }
+                    if (item.transform.position == topRightPosition)
+                    {
+                        _neighbors.Add(NeighborType.TopRight, item);
+                    }
+                }
+            }
+            if (colorType == ColorType.Black)
+            {
+                foreach (var item in _blackCells)
+                {
+                    if (item.transform.position == bottomLeftPosition)
+                    {
+                        _neighbors.Add(NeighborType.BottomLeft, item);
+                    }
+                    if (item.transform.position == bottomRightPosition)
+                    {
+                        _neighbors.Add(NeighborType.BottomRight, item);
+                    }
                 }
             }
         }

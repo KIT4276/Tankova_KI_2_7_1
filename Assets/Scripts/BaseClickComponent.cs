@@ -34,8 +34,6 @@ namespace Checkers
         /// <remarks> У клеток пара - фишка, у фишек - клетка</remarks>
         public BaseClickComponent Pair { get; set; }
 
-       
-
         protected void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent<ChipComponent>(out ChipComponent chipComponent))
