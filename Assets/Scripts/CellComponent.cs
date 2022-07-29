@@ -14,21 +14,14 @@ namespace Checkers
         private bool _canSelect = true;
         private CellComponent[] _blackCells;
         private Vector3 ToInt;
-
-        //public GameObject _pairOfCell; // фишка, которая стоит на клетке
-
         public static CellComponent Self;
 
         protected override void Start()
         {
             Self = this;
-
-            _blackCells = FindObjectsOfType<CellComponent>(); //заполнили массив снова, потому что я не знаю, как его вытащить из GameManager
-
-            _neighbors = new Dictionary<NeighborType, CellComponent>();
-
             base.Start();
-
+            _blackCells = FindObjectsOfType<CellComponent>(); //заполнили массив снова, потому что я не знаю, как его вытащить из GameManager
+            _neighbors = new Dictionary<NeighborType, CellComponent>();
             OnFocusEventHandler += ToHighlight;
         }
 
@@ -52,12 +45,10 @@ namespace Checkers
                     if (item.transform.position == topLeftPosition) 
                     {
                         _neighbors.Add(NeighborType.TopLeft, item);
-                        Debug.Log("TopLeft Neibor " + _neighbors[NeighborType.TopLeft]);
                     }
                     if (item.transform.position == topRightPosition)
                     {
                         _neighbors.Add(NeighborType.TopRight, item);
-                        Debug.Log("TopRight Neibor " + _neighbors[NeighborType.TopRight]);
                     }
                 }
             }
@@ -77,7 +68,10 @@ namespace Checkers
             }
         }
 
-        public bool TryGetNeighbor(NeighborType type, out CellComponent component) => _neighbors.TryGetValue(type, out component);
+        public bool TryGetNeighbor(NeighborType type, out CellComponent component)
+        {
+            return _neighbors.TryGetValue(type, out component);
+        }
 
         public override void OnPointerEnter(PointerEventData eventData)
         {
@@ -107,7 +101,7 @@ namespace Checkers
        /// <summary>
         /// Конфигурирование связей клеток
         /// </summary>
-		public void Configuration(Dictionary<NeighborType, CellComponent> neighbors)
+		public void Configuration(Dictionary<NeighborType, CellComponent> neighbors) // а нужен ли он мне?
 		{
             if (_neighbors != null) return;
             _neighbors = neighbors;

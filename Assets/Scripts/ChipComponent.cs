@@ -7,25 +7,16 @@ namespace Checkers
 {
     public class ChipComponent : BaseClickComponent
     {
-        [SerializeField] [Range(1, 5)] private float _moveSpeed = 1;
-
-        public event Action ChipMove;
-
-        private CapsuleCollider _collider;
-
+        [SerializeField] [Range(1, 5)] 
+        private float _moveSpeed = 1;
         private bool _cantEat = true;
-
         private CellComponent _cell;
-
-        //public GameObject _pairOfChip; // клетка, на которой стоит фишка
-
-        //public static ChipComponent Self;
+        private CapsuleCollider _collider;
+        public event Action ChipMove;
 
         protected override void Start()
         {
             base.Start();
-
-            //Self = this;
             if (_cell is CellComponent cell)
             {
                 _cell = Pair.GetComponent<CellComponent>();  // сомнения
@@ -47,6 +38,8 @@ namespace Checkers
 
         public void ToSelectChip()
         {
+            CellComponent.Self.SetNeibor(Pair, _color);
+
             if (IsSelected)
             {
                 IsSelected = false;
@@ -59,14 +52,13 @@ namespace Checkers
                 AddAdditionalMaterial(_selectMaterial, 2);
                 PossibleMoves();
             }
-
-            CellComponent.Self.SetNeibor(Pair, _color);
         }
 
         private void PossibleMoves() // РАЗОБРАТЬСЯ!
         {
             if (Pair is CellComponent cell)
             {
+
                 NeighborType Left = NeighborType.TopLeft;
                 NeighborType Righ = NeighborType.TopRight;
 
@@ -165,10 +157,9 @@ namespace Checkers
             }
 
             transform.position = target;
-            //PairChipWithCell(); 
             ChipMove?.Invoke();
         }
-        private bool TryEat() // почему не работает?
+        private bool TryEat() // избавиться от  Raycast
         {
             if (Physics.Raycast(transform.position, Vector3.down, out var hitChip, 5))
             {
@@ -183,7 +174,6 @@ namespace Checkers
             }
             return false;
         }
-
 
         public void Eat()
         {
