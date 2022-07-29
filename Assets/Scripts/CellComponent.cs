@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,6 +13,7 @@ namespace Checkers
         public bool CanBeOccupied => !_canSelect && IsFree;
         private bool _canSelect = true;
         private CellComponent[] _blackCells;
+        private Vector3 ToInt;
 
         //public GameObject _pairOfCell; // фишка, которая стоит на клетке
 
@@ -30,30 +32,32 @@ namespace Checkers
             OnFocusEventHandler += ToHighlight;
         }
 
-        public void SetNeibor(BaseClickComponent pair, ColorType colorType) // Пробуем
+        public void SetNeibor(BaseClickComponent pair, ColorType colorType) 
         {
             _neighbors.Clear();
 
             var KeyCel = pair.gameObject;
+            var keyCelPosition = KeyCel.transform.position;
+            var keyCelPositionInt = FromFloatToInt(keyCelPosition);
 
-            var topLeftPosition = KeyCel.transform.position + new Vector3(-1, 0, 1);
-            var topRightPosition = KeyCel.transform.position + new Vector3(1, 0, 1);
-            var bottomLeftPosition = KeyCel.transform.position + new Vector3(1, 0, -1);
-            var bottomRightPosition = KeyCel.transform.position + new Vector3(-1, 0, -1);
-           
+            var topLeftPosition = keyCelPositionInt + new Vector3(-1, 0, 1);
+            var topRightPosition = keyCelPositionInt + new Vector3(1, 0, 1);
+            var bottomLeftPosition = keyCelPositionInt + new Vector3(1, 0, -1);
+            var bottomRightPosition = keyCelPositionInt + new Vector3(-1, 0, -1);
+
             if (colorType == ColorType.White)
             {
                 foreach (var item in _blackCells) 
                 {
-                    Debug.Log("topRightPosition  " + topRightPosition);
-                    Debug.Log("item  " + item.transform.position);
-                    if (item.transform.position == topLeftPosition) // почему не заходит сюда?
+                    if (item.transform.position == topLeftPosition) 
                     {
                         _neighbors.Add(NeighborType.TopLeft, item);
+                        Debug.Log("TopLeft Neibor " + _neighbors[NeighborType.TopLeft]);
                     }
                     if (item.transform.position == topRightPosition)
                     {
                         _neighbors.Add(NeighborType.TopRight, item);
+                        Debug.Log("TopRight Neibor " + _neighbors[NeighborType.TopRight]);
                     }
                 }
             }
@@ -108,6 +112,12 @@ namespace Checkers
             if (_neighbors != null) return;
             _neighbors = neighbors;
 		}
+
+        private Vector3 FromFloatToInt(Vector3 fromFloat)
+        {
+            ToInt = new Vector3((int)fromFloat.x, (int)fromFloat.y, (int)fromFloat.z);
+            return ToInt;
+        }
     }
 
     /// <summary>

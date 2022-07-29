@@ -1378,8 +1378,8 @@ GameObject:
   - component: {fileID: 421183046}
   - component: {fileID: 421183045}
   - component: {fileID: 421183044}
-  - component: {fileID: 421183047}
   - component: {fileID: 421183048}
+  - component: {fileID: 421183047}
   m_Layer: 0
   m_Name: WhiteChecker (9)
   m_TagString: Untagged
