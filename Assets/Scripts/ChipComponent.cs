@@ -147,7 +147,7 @@ namespace Checkers
                 yield return null;
             }
 
-            TryEat();
+            //TryEat();
 
             currentTime = 0f;
             target = new Vector3(target.x, startPos.y, target.z);
