@@ -11,19 +11,22 @@ namespace Checkers
         private float _moveSpeed = 1;
         private bool _cantEat = true;
         private CellComponent _cell;
-        private CapsuleCollider _collider;
+        private Rigidbody _rigidbody;
         public event Action ChipMove;
+        //private Collider _collider;
 
         protected override void Start()
         {
             base.Start();
+
             if (_cell is CellComponent cell)
             {
                 _cell = Pair.GetComponent<CellComponent>();  // сомнения
             }
 
-            _collider = GetComponent<CapsuleCollider>();
-            _collider.isTrigger = true;
+            _rigidbody = GetComponent<Rigidbody>();
+            //_collider = GetComponent<Collider>();
+            //_collider.isTrigger = true;
         }
      
         public override void OnPointerEnter(PointerEventData eventData)
@@ -159,11 +162,9 @@ namespace Checkers
             transform.position = target;
             ChipMove?.Invoke();
         }
-        private bool TryEat() // избавиться от  Raycast
+        private bool TryEat(Collider collider) // избавилась от  Raycast, нужно проверить
         {
-            if (Physics.Raycast(transform.position, Vector3.down, out var hitChip, 5))
-            {
-                var chip = hitChip.collider.GetComponent<ChipComponent>();
+                var chip = collider.GetComponent<ChipComponent>();
                 if (chip != null)
                 {
                     chip.Eat();
@@ -171,8 +172,15 @@ namespace Checkers
                     else WinCheck.Self.BlackHP -= 1;
                     return true;
                 }
-            }
             return false;
+            
+        }
+
+        private void OnCollisionEnter(Collision collision) //пока так, потом надо проверить
+        {
+           var _collider = collision.collider;
+
+            TryEat(_collider);
         }
 
         public void Eat()
