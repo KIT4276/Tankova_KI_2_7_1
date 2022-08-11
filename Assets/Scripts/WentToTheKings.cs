@@ -24,7 +24,7 @@ namespace Checkers
                 var chip = other.GetComponent<ChipComponent>();
                 if (chip.GetColor == _color)
                 {
-                    WinCheck.Self.GetCheck = true;
+                    //WinCheck.Self.GetCheck = true;
                 }
             }
         }
