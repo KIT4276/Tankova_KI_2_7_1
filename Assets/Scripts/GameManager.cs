@@ -74,7 +74,6 @@ namespace Checkers
                 _selectedChip = null;
 
                 NextTurn();
-                
             }
         }
 
@@ -87,11 +86,11 @@ namespace Checkers
         }
         private void CheckWin()
         {
-            //if (WinCheck.Self.GetCheck == true)
-            //{
-            //    Debug.Log("Победа");
-            //    UnityEditor.EditorApplication.isPaused = true;
-            //}
+            if (WinCheck.Self.GetCheck == true)
+            {
+                Debug.Log("Победа");
+                UnityEditor.EditorApplication.isPaused = true;
+            }
         }
     }
 }

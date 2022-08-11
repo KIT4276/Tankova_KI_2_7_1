@@ -16,6 +16,12 @@ namespace Checkers
         private Vector3 ToInt;
         public static CellComponent Self;
 
+        private Vector3 _topLeftPosition;
+        private Vector3 _topRightPosition;
+        private Vector3 _bottomLeftPosition;
+        private Vector3 _bottomRightPosition;
+
+
         protected override void Start()
         {
             Self = this;
@@ -23,47 +29,39 @@ namespace Checkers
             _blackCells = FindObjectsOfType<CellComponent>(); //заполнили массив снова, потому что я не знаю, как его вытащить из GameManager
             _neighbors = new Dictionary<NeighborType, CellComponent>();
             OnFocusEventHandler += ToHighlight;
+            
+            SetNeibor(this);
         }
 
-        public void SetNeibor(BaseClickComponent pair, ColorType colorType) 
+        public void SetNeibor(CellComponent currentCell) 
         {
-            _neighbors.Clear();
-
-            var KeyCel = pair.gameObject;
+            var KeyCel = currentCell.gameObject;
             var keyCelPosition = KeyCel.transform.position;
             var keyCelPositionInt = FromFloatToInt(keyCelPosition);
 
-            var topLeftPosition = keyCelPositionInt + new Vector3(-1, 0, 1);
-            var topRightPosition = keyCelPositionInt + new Vector3(1, 0, 1);
-            var bottomLeftPosition = keyCelPositionInt + new Vector3(1, 0, -1);
-            var bottomRightPosition = keyCelPositionInt + new Vector3(-1, 0, -1);
-
-            if (colorType == ColorType.White)
+            _topLeftPosition = keyCelPositionInt + new Vector3(-1, 0, 1);
+            _topRightPosition = keyCelPositionInt + new Vector3(1, 0, 1);
+            _bottomLeftPosition = keyCelPositionInt + new Vector3(-1, 0, -1);
+            _bottomRightPosition = keyCelPositionInt + new Vector3(1, 0, -1);
+                
+            foreach (var item in _blackCells)
             {
-                foreach (var item in _blackCells) 
+                if (item.transform.position == _topLeftPosition)
                 {
-                    if (item.transform.position == topLeftPosition) 
-                    {
-                        _neighbors.Add(NeighborType.TopLeft, item);
-                    }
-                    if (item.transform.position == topRightPosition)
-                    {
-                        _neighbors.Add(NeighborType.TopRight, item);
-                    }
+                    _neighbors.Add(NeighborType.TopLeft, item);
                 }
-            }
-            if (colorType == ColorType.Black)
-            {
-                foreach (var item in _blackCells)
+                if (item.transform.position == _topRightPosition)
                 {
-                    if (item.transform.position == bottomLeftPosition)
-                    {
-                        _neighbors.Add(NeighborType.BottomLeft, item);
-                    }
-                    if (item.transform.position == bottomRightPosition)
-                    {
-                        _neighbors.Add(NeighborType.BottomRight, item);
-                    }
+                    _neighbors.Add(NeighborType.TopRight, item);
+                }
+
+                if (item.transform.position == _bottomLeftPosition)
+                {
+                    _neighbors.Add(NeighborType.BottomLeft, item);
+                }
+                if (item.transform.position == _bottomRightPosition)
+                {
+                    _neighbors.Add(NeighborType.BottomRight, item);
                 }
             }
         }

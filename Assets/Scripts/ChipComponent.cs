@@ -11,9 +11,9 @@ namespace Checkers
         private float _moveSpeed = 1;
         private bool _cantEat = true;
         private CellComponent _cell;
-        private Rigidbody _rigidbody;
         public event Action ChipMove;
-        //private Collider _collider;
+
+        private BaseClickComponent _eatenChip;
 
         protected override void Start()
         {
@@ -23,10 +23,6 @@ namespace Checkers
             {
                 _cell = Pair.GetComponent<CellComponent>();  // сомнения
             }
-
-            _rigidbody = GetComponent<Rigidbody>();
-            //_collider = GetComponent<Collider>();
-            //_collider.isTrigger = true;
         }
      
         public override void OnPointerEnter(PointerEventData eventData)
@@ -41,8 +37,6 @@ namespace Checkers
 
         public void ToSelectChip()
         {
-            CellComponent.Self.SetNeibor(Pair, _color);
-
             if (IsSelected)
             {
                 IsSelected = false;
@@ -57,7 +51,7 @@ namespace Checkers
             }
         }
 
-        private void PossibleMoves() // РАЗОБРАТЬСЯ!
+        private void PossibleMoves() 
         {
             if (Pair is CellComponent cell)
             {
@@ -67,8 +61,8 @@ namespace Checkers
 
                 if (GetColor == ColorType.Black)
                 {
-                    Left = NeighborType.BottomLeft;
-                    Righ = NeighborType.BottomRight;
+                    Left = NeighborType.BottomRight;
+                    Righ = NeighborType.BottomLeft;
                 }
 
                 if (cell.TryGetNeighbor(Left, out var leftCell))
@@ -81,13 +75,19 @@ namespace Checkers
                     }
                     else
                     {
+                        Debug.Log("else"); // дальше этого момента после первых ходов не заходит
                         if (leftCell.Pair.GetColor != GetColor &&
                             leftCell.TryGetNeighbor(Left, out var leftOverEnemy) &&
                             leftOverEnemy.IsFree)
                         {
-                            (leftCell.Pair as ChipComponent)?.ToHighlightEat();
-                            leftOverEnemy.ToHighlightCell();
-                            Debug.Log("leftCell.Is not Free");
+                            Debug.Log("leftCell.IsNotFree1");
+                            if (leftCell.Pair.GetComponent<ChipComponent>() != null)
+                            {
+                                leftCell.Pair.GetComponent<ChipComponent>().ToHighlightEat();
+                                leftOverEnemy.ToHighlightCell();
+                                _eatenChip = leftCell.Pair;
+                                Debug.Log("leftCell.IsNotFree2");
+                            }
                         }
                     }
                 }
@@ -105,9 +105,13 @@ namespace Checkers
                             rightCell.TryGetNeighbor(Righ, out var rightOverEnemy) &&
                             rightOverEnemy.IsFree)
                         {
-                            (rightCell.Pair as ChipComponent)?.ToHighlightEat();
-                            rightOverEnemy.ToHighlightCell();
-                            Debug.Log("leftCell.Is not Free");
+                            if (rightCell.Pair.GetComponent<ChipComponent>() != null)
+                            {
+                                rightCell.Pair.GetComponent<ChipComponent>().ToHighlightEat();
+                                rightOverEnemy.ToHighlightCell();
+                                _eatenChip = rightCell.Pair;
+                                Debug.Log("rightCell.IsNotFree");
+                            }
                         }
                     }
                 }
@@ -140,6 +144,7 @@ namespace Checkers
             var currentTime = 0f;
             var startPos = transform.position;
             target = new Vector3(target.x, startPos.y, target.z);
+
             while (currentTime < 2 )
             {
                 transform.position = Vector3.Lerp(startPos, target, currentTime / 2);
@@ -147,7 +152,11 @@ namespace Checkers
                 yield return null;
             }
 
-            //TryEat();
+            if (_eatenChip != null)
+            {
+                var chip = _eatenChip.GetComponent<ChipComponent>();
+                chip.TryEat(chip);
+            }
 
             currentTime = 0f;
             target = new Vector3(target.x, startPos.y, target.z);
@@ -162,30 +171,22 @@ namespace Checkers
             transform.position = target;
             ChipMove?.Invoke();
         }
-        private bool TryEat(Collider collider) // избавилась от  Raycast, нужно проверить
+
+        private bool TryEat(ChipComponent enemyChip) 
         {
-                var chip = collider.GetComponent<ChipComponent>();
-                if (chip != null)
-                {
-                    chip.Eat();
-                    if (chip.GetColor == ColorType.White) WinCheck.Self.WhiteHP -= 1;
-                    else WinCheck.Self.BlackHP -= 1;
-                    return true;
-                }
+            if (enemyChip != null)
+            {
+                enemyChip.Eat();
+                if (enemyChip.GetColor == ColorType.White) WinCheck.Self.WhiteHP -= 1;
+                else WinCheck.Self.BlackHP -= 1;
+                return true;
+            }
             return false;
-            
-        }
-
-        private void OnCollisionEnter(Collision collision) //пока так, потом надо проверить
-        {
-           var _collider = collision.collider;
-
-            TryEat(_collider);
         }
 
         public void Eat()
         {
-            Destroy(this);
+            gameObject.SetActive(false);
         }
     }
 }

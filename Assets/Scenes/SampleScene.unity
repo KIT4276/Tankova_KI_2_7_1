@@ -366,13 +366,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55297950}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 0
+  _isBlackKing: 1
 --- !u!114 &55297955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,13 +939,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246920235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 0
+  _isBlackKing: 1
 --- !u!114 &246920240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2265,13 +2267,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545955337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 0
+  _isBlackKing: 1
 --- !u!114 &545955342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5811,13 +5814,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067832207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 1
+  _isBlackKing: 0
 --- !u!1001 &1068264595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5979,13 +5983,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084710599}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 1
+  _isBlackKing: 0
 --- !u!4 &1089752962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8335274903449003488, guid: b3157178f4e0278448adae30adeb1383,
@@ -6322,13 +6327,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189707028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 0
+  _isBlackKing: 1
 --- !u!114 &1189707033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7021,7 +7027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348599655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.6, z: 3}
+  m_LocalPosition: {x: 3, y: 0.6, z: 5}
   m_LocalScale: {x: 0.6, y: 0.1, z: 0.6}
   m_Children: []
   m_Father: {fileID: 762217446}
@@ -8034,13 +8040,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535830380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 1
+  _isBlackKing: 0
 --- !u!1 &1548430817
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,13 +8114,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548430817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692d23cc2967ae54e8f5d3e9d7c3b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPrivate: 0
-  _isKing: 0
+  _isWhiteKing: 1
+  _isBlackKing: 0
 --- !u!1 &1548515531
 GameObject:
   m_ObjectHideFlags: 0
@@ -9997,7 +10005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1978142476
 Transform:
   m_ObjectHideFlags: 0

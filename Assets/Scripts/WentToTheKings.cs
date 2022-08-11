@@ -4,7 +4,7 @@ namespace Checkers
 {
     public class WentToTheKings : MonoBehaviour
     {
-        [Tooltip("Цветовая сторона игрового объекта"), SerializeField]
+        [Tooltip("Цветовая сторона тех, чьи это будут дамки"), SerializeField]
         private ColorType _color;
 
         public static WentToTheKings Self;
