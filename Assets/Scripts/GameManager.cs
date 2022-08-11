@@ -35,10 +35,6 @@ namespace Checkers
                 }
             }
         }
-        private void Update()
-        {
-            //CheckWin();
-        }
 
         private void SelectObject(BaseClickComponent component)
         {
@@ -73,7 +69,6 @@ namespace Checkers
                 _selectedChip.Move(cell);
                 _selectedChip = null;
 
-
                 NextTurn();
             }
         }
@@ -85,13 +80,5 @@ namespace Checkers
             _currentTurn = _currentTurn == ColorType.Black ? ColorType.White : ColorType.Black;
             CameraControl.Self.CameraViewChange();
         }
-        //private void CheckWin()
-        //{
-        //    if (WinCheck.Self.GetCheck == true)
-        //    {
-        //        Debug.Log("Победа");
-        //        UnityEditor.EditorApplication.isPaused = true;
-        //    }
-        //}
     }
 }

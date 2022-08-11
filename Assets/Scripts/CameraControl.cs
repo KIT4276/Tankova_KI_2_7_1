@@ -34,10 +34,6 @@ namespace Checkers
             while (currentTime < time)
             {
                 transform.rotation = Quaternion.Lerp(start, target, Mathf.Pow(currentTime - _rotateTime * Time.deltaTime, 2));
-                // transform.rotation = Quaternion.Lerp(start, target, 1 - (time - currentTime) / time);   // если делать так,
-                // то в этом проекте скорость вращения уменьшается во время этого вращения, а в отдельном проекте работает отлично.
-                // почему?
-
                 currentTime += Time.deltaTime;
                 yield return null;
             }

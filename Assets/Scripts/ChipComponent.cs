@@ -22,7 +22,7 @@ namespace Checkers
 
             if (_cell is CellComponent cell)
             {
-                _cell = Pair.GetComponent<CellComponent>();  // сомнения
+                _cell = Pair.GetComponent<CellComponent>();
             }
         }
      
@@ -56,7 +56,6 @@ namespace Checkers
         {
             if (Pair is CellComponent cell)
             {
-
                 NeighborType Left = NeighborType.TopLeft;
                 NeighborType Righ = NeighborType.TopRight;
 
@@ -68,37 +67,30 @@ namespace Checkers
 
                 if (cell.TryGetNeighbor(Left, out var leftCell))
                 {
-                    //Debug.Log("TryGetNeighbor Left");
                     if (leftCell.IsFree)
                     {
                         leftCell.ToHighlightCell();
-                        //Debug.Log("leftCell.IsFree");
                     }
                     else
                     {
-                        //Debug.Log("else"); 
                         if (leftCell.Pair.GetColor != GetColor &&
                             leftCell.TryGetNeighbor(Left, out var leftOverEnemy) &&
                             leftOverEnemy.IsFree)
                         {
-                            //Debug.Log("leftCell.IsNotFree1");
                             if (leftCell.Pair.GetComponent<ChipComponent>() != null)
                             {
                                 leftCell.Pair.GetComponent<ChipComponent>().ToHighlightEat();
                                 leftOverEnemy.ToHighlightCell();
                                 _eatenChip = leftCell.Pair;
-                                //Debug.Log("leftCell.IsNotFree2");
                             }
                         }
                     }
                 }
                 if (cell.TryGetNeighbor(Righ, out var rightCell))
                 {
-                    //Debug.Log("TryGetNeighbor Righ");
                     if (rightCell.IsFree)
                     {
                         rightCell.ToHighlightCell();
-                        //Debug.Log("rightCell.IsFree");
                     }
                     else
                     {
@@ -111,7 +103,6 @@ namespace Checkers
                                 rightCell.Pair.GetComponent<ChipComponent>().ToHighlightEat();
                                 rightOverEnemy.ToHighlightCell();
                                 _eatenChip = rightCell.Pair;
-                                //Debug.Log("rightCell.IsNotFree");
                             }
                         }
                     }

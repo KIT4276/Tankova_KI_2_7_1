@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\ChipComponent.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\TrtiggerComponent.cs" />
-    <Compile Include="Assets\Scripts\WentToTheKings.cs" />
     <Compile Include="Assets\Scripts\WinCheck.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
